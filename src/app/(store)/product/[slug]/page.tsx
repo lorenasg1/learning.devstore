@@ -9,7 +9,7 @@ type ProductProps = {
 	}
 }
 
-async function getProduct(slug: string): Promise<TProduct> {
+export async function getProduct(slug: string): Promise<TProduct> {
 	const response = await api(`/products/${slug}`, {
 		next: {
 			revalidate: 60 * 60, // 1h,
