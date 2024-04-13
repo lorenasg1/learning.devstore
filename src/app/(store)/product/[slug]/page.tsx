@@ -31,6 +31,17 @@ export async function generateMetadata({
 	}
 }
 
+export async function generateStaticParams() {
+	const response = await api('/products/featured')
+	const products = await response.json()
+
+	return products.map((product: TProduct) => ({
+		params: {
+			slug: product.slug,
+		},
+	}))
+}
+
 export default async function Product({ params: { slug } }: ProductProps) {
 	const product = await getProduct(slug)
 	const price = new Intl.NumberFormat('pt-BR', {
