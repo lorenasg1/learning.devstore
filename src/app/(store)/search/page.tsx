@@ -4,6 +4,8 @@ import { formatPrice } from '@/utils/formatPrice'
 import Image from 'next/image'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
+import { Suspense } from 'react'
+import { CurrentSearch } from './current-search'
 
 interface SearchProps {
 	searchParams: {
