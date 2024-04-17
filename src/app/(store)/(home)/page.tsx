@@ -39,7 +39,7 @@ export default async function Home() {
 					priority
 				/>
 
-				<div className="absolute bottom-20 right-8 lg:bottom-28 lg:right-28 h-12 flex items-center gap-2 max-w-[300px] rounded-full border-2 border-zinc-500 bg-black/60 p-1 pl-5">
+				<div className="absolute bottom-28 right-28 h-12 flex items-center gap-2 max-w-[300px] rounded-full border-2 border-zinc-500 bg-black/60 p-1 pl-5">
 					<span title={highlightedProduct.title} className="text-sm truncate">
 						{highlightedProduct.title}
 					</span>
@@ -65,7 +65,7 @@ export default async function Home() {
 						priority
 					/>
 
-					<div className="absolute bottom-18 right-18 h-12 flex items-center gap-2 max-w-[280px] rounded-full border-2 border-zinc-500 bg-black/60 p-1 pl-5">
+					<div className="absolute bottom-14 right-10 h-12 flex items-center gap-2 max-w-[280px] rounded-full border-2 border-zinc-500 bg-black/60 p-1 pl-5">
 						<span
 							title="Moletom Come to the AI side"
 							className="text-sm truncate"
