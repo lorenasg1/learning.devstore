@@ -3,7 +3,6 @@ describe('add product to cart', () => {
 		cy.visit('http://localhost:3000')
 		cy.get('a[href^="/product"]').first().click()
 		cy.location('pathname').should('include', '/product')
-
 		cy.contains('adicionar à sacola', { matchCase: false }).click()
 
 		cy.contains('Sacola (1)').should('exist')
@@ -26,9 +25,9 @@ describe('add product to cart', () => {
 		cy.location('pathname').should('include', '/search')
 
 		cy.get('a[href^="/product"]').first().click()
+		cy.location('pathname').should('include', '/product')
 		cy.contains('adicionar à sacola', { matchCase: false }).click()
 
-		cy.location('pathname').should('include', '/product')
 		cy.contains('Sacola (1)').should('exist')
 	})
 })
