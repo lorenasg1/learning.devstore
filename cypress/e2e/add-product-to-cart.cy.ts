@@ -21,7 +21,7 @@ describe('add product to cart', () => {
 	})
 
 	it('should not add duplicated products to cart', () => {
-		cy.get('input[name="q"]').type('moletom').parent('form').submit()
+		cy.searchByQuery('moletom')
 		cy.location('pathname').should('include', '/search')
 
 		cy.get('a[href^="/product"]').first().click()
